@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Module.GUI.Controller">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="570.0" prefWidth="240.0">
+            <children>
+                <Button fx:id="btTweet" layoutX="11.0" layoutY="200.0" mnemonicParsing="false" onAction="#onBtnTweet"
+                        prefHeight="18.0" prefWidth="218.0" text="Tweetar"/>
+                <TextField fx:id="accountNameTextField" layoutX="11.0" layoutY="74.0" prefHeight="26.0"
+                           prefWidth="218.0" promptText="Nome da conta"/>
+                <Button fx:id="btAccountCreate" layoutX="10.0" layoutY="146.0" mnemonicParsing="false"
+                        onAction="#onBtnAccountCreate" prefHeight="18.0" prefWidth="218.0" text="Interagir"/>
+                <ComboBox fx:id="selectorBox" layoutX="11.0" layoutY="172.0" onAction="#onSelectorBoxInteract"
+                          prefHeight="28.0" prefWidth="218.0"/>
+                <TextField fx:id="tweetText" layoutX="11.0" layoutY="236.0" prefHeight="80.0" prefWidth="218.0"
+                           promptText="Digite seu tweet"/>
+                <TextArea fx:id="timelineArea" layoutX="10.0" layoutY="324.0" prefHeight="232.0" prefWidth="218.0"/>
+                <Text layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil Selecionado:"/>
+                <Label fx:id="selectedUser" layoutX="131.0" layoutY="6.0"/>
+                <RadioButton fx:id="CPFregister" layoutX="32.0" layoutY="114.0" mnemonicParsing="false" selected="true"
+                             text="CPF">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="cadastro"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="CNPJregister" layoutX="150.0" layoutY="114.0" mnemonicParsing="false" text="CNPJ"
+                             toggleGroup="$cadastro"/>
+                <TextField fx:id="codeField" layoutX="10.0" layoutY="34.0" prefHeight="26.0" prefWidth="218.0"
+                           promptText="CPF/CNPJ"/>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
